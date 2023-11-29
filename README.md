@@ -1,49 +1,38 @@
-# Investigación sobre PEP 8 en Python
+PEP 8
+PEP 8 es una guía de estilo para la escritura de código en Python. Establece reglas y pautas sobre cómo escribir código Python de manera legible y consistente. Algunos de los puntos clave que aborda son:
 
-## Introducción
-PEP 8 es un conjunto de directrices de estilo de codificación para el lenguaje de programación Python. El acrónimo PEP significa "Python Enhancement Proposal", y el PEP 8 en particular se centra en establecer una convención de estilo de codificación para que el código Python sea más legible y consistente. En esta investigación, exploraremos qué es PEP 8, por qué es importante y proporcionaremos un ejemplo de código que sigue las directrices de PEP 8.
+Indentación: Se recomienda utilizar 4 espacios por nivel de indentación.
+Nombres de variables y funciones: Se sugiere usar minúsculas para las variables, con subrayados para separar palabras (mi_variable) y minúscula con palabras separadas por subrayados para las funciones (mi_funcion()).
+Espacios en blanco: Se recomienda utilizar espacios alrededor de operadores y después de las comas, pero sin espacios en blanco inmediatamente dentro de paréntesis o corchetes.
+Longitud de línea: Las líneas de código no deben exceder los 79 caracteres para una mejor legibilidad.
+Comentarios: Se anima a agregar comentarios descriptivos al código, pero estos comentarios no deben ser redundantes ni obvios.
+Módulos y Paquetes
+En Python, un módulo es un archivo que contiene código Python, mientras que un paquete es una carpeta que contiene varios módulos y un archivo especial __init__.py. Los módulos permiten organizar el código en archivos separados para una mejor estructura y reutilización. Se pueden importar utilizando la palabra clave import en otros programas o scripts.
 
-## ¿Qué es PEP 8?
-PEP 8 es el PEP que describe las recomendaciones de estilo para escribir código en Python. Fue escrito por el conocido desarrollador de Python, Guido van Rossum, y se ha convertido en un estándar de facto para la comunidad de programadores de Python. Las pautas de PEP 8 abarcan una variedad de temas, incluyendo la indentación, la longitud máxima de las líneas, el uso de espacios en blanco, la nomenclatura de variables, el manejo de excepciones y mucho más.
+Ejemplo de un módulo:
 
-## Importancia de PEP 8
-El cumplimiento de las directrices de PEP 8 es esencial para mantener un código Python limpio y legible. Un código que sigue las convenciones de PEP 8 es más fácil de mantener, entender y depurar. Además, facilita la colaboración en proyectos de código abierto, ya que los desarrolladores pueden entender y trabajar en el código de los demás de manera más eficiente. En resumen, PEP 8 promueve la consistencia y la calidad del código Python.
+python
+Copy code
+# módulo.py
+def saludar():
+    print("¡Hola desde el módulo!")
+Ejemplo de cómo importarlo:
 
-## Ejemplo de código que sigue PEP 8
-A continuación, se muestra un ejemplo de código Python que sigue las directrices de PEP 8:
+python
+Copy code
+import modulo
 
-```python
-# Módulo para cálculos matemáticos
+modulo.saludar()
+Los paquetes, por otro lado, son directorios que contienen varios módulos y pueden tener jerarquías más complejas. Permiten organizar y estructurar grandes proyectos.
 
-def suma(a, b):
-    """
-    Esta función suma dos números y devuelve el resultado.
-    """
-    return a + b
+Entornos Virtuales
+Los entornos virtuales son herramientas que permiten tener entornos Python aislados y separados del sistema principal. Estos entornos virtuales se utilizan para instalar paquetes y dependencias específicas para un proyecto sin afectar la instalación global de Python en la máquina.
 
-def resta(a, b):
-    """
-    Esta función resta el segundo número del primero y devuelve el resultado.
-    """
-    return a - b
+Algunas herramientas comunes para manejar entornos virtuales en Python son virtualenv y venv. Estos permiten crear, activar y desactivar entornos virtuales para trabajar en proyectos con dependencias específicas sin interferir con otros proyectos.
 
-def multiplicacion(a, b):
-    """
-    Esta función multiplica dos números y devuelve el resultado.
-    """
-    return a * b
+PYPI (Python Package Index)
+PyPI es un repositorio central para paquetes de software de Python. Contiene una gran cantidad de paquetes y bibliotecas de Python que se pueden instalar fácilmente usando herramientas como pip, el gestor de paquetes de Python.
 
-def division(a, b):
-    """
-    Esta función divide el primer número por el segundo y devuelve el resultado.
-    """
-    if b == 0:
-        raise ValueError("No se puede dividir por cero.")
-    return a / b
+Los desarrolladores pueden cargar sus paquetes en PyPI para compartirlos con la comunidad de Python y permitir que otros los instalen y utilicen en sus proyectos.
 
-```
-
-Este ejemplo sigue las convenciones de PEP 8 en cuanto a la indentación (usando 4 espacios por nivel de indentación), la longitud máxima de línea (80 caracteres), la documentación de funciones y el estilo de nomenclatura (snake_case para nombres de funciones y variables).
-
-## Conclusión
-PEP 8 es una herramienta importante para mantener un código Python limpio, legible y consistente. Al seguir estas directrices de estilo, los desarrolladores pueden escribir código de alta calidad que es más fácil de entender y mantener. Se recomienda encarecidamente que todos los programadores de Python se familiaricen con PEP 8 y lo apliquen en sus proyectos.
+Estos conceptos son fundamentales para desarrollar en Python de manera eficiente, estructurada y colaborativa. Siguiendo las convenciones de PEP 8, utilizando módulos y paquetes para organizar el código, gestionando dependencias con entornos virtuales y accediendo a una amplia gama de paquetes a través de PyPI, los desarrolladores pueden trabajar de manera más efectiva y colaborativa en proyectos Python.
